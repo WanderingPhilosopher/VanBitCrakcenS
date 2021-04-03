@@ -18,13 +18,20 @@ I will update this more in-depth later.
 Other flags include:
 
 -t for CPU threads (not optimized for CPU use, that was not the intent/focus)
+
 -gpu for gpu use
 -gpuId 0 (if more than one gpu use -gpuId 0,1,2,3,4  etc.)
+
 -g to adjust x grid size; -g 256
+
 --keyspace to enter your start and end range; example 80000:FFFFF
+
 --continue to save work/progress; --continue continue.txt
--o for output/results file; -o outputfile.txt
+
+-o for output/results file; -o outputfile.txt (if you do not add -o option, keys found will print on screen and to a text file named "KeysFound.txt")
+
 -i for input file of addresses/strings; -i inputfile.txt
+
 -r for rekey; -r 100000
 the -r is important because in this spread version, it really tells the program how often to save your continue file in MKey/s. Based on your gpu and its MKey/s, you need to adjust the -r.  If your gpu's speed is 100 MKey/s and you want to save your continue file every minute, then you would calculate 60 (seconds) multiplied by 100 = 6000; so you would want to input -r 6000. If you do not input a -r it will go to the default of 10000 and depending on your card you could be saving every 5 to seconds (not recommended.)
 You can also enter a single address/string at the end of your command line/batch file; comannd line ....... 19Hed12
